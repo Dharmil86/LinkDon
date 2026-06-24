@@ -1,0 +1,111 @@
+.container {
+    font-family: "Poppins";
+    padding: 1.2rem;
+}
+
+.mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding-inline: 2rem;
+    height: 80vh;
+}
+
+.mainContainer__left {
+
+    flex: 0.5;
+}
+
+.mainContainer__right {
+
+    flex: 0.5;
+}
+
+.mainContainer__left > p:nth-child(1) {
+    font-size: 2.9rem;
+    font-weight: 700;
+
+    background: linear-gradient(
+        90deg,
+        #000000,
+        #5f5f5f,
+        #b3b3b3,
+        #5f5f5f,
+        #000000
+    );
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    animation: homeBreath 4s ease-in-out infinite;
+}
+
+/* Premium breathing animation */
+@keyframes homeBreath {
+    0% {
+        background-position: 0% 50%;
+        transform: scale(1);
+        opacity: 0.85;
+    }
+    50% {
+        background-position: 100% 50%;
+        transform: scale(1.03);
+        opacity: 1;
+    }
+    100% {
+        background-position: 0% 50%;
+        transform: scale(1);
+        opacity: 0.85;
+    }
+}
+
+/* .mainContainer__left > p:nth-child(1):hover {
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+} */
+
+
+.mainContainer__left > p:nth-child(2) {
+    font-size: 1.7rem;
+    color: #4D4D4D;
+}
+
+.mainContainer__left > div.buttonJoin {
+    width: fit-content;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 0.8rem;
+    transition: all 0.2s;
+    font-size: 1.4rem;
+    background: rgb(197, 44, 208); 
+    color: white;
+    padding-inline: 1.2rem;
+    padding-block: 0.6rem;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .mainContainer {
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 1.3em;
+
+    }
+
+    .mainContainer__left {
+        flex: 1;
+        padding-top: 1.5rem;
+
+    }
+
+    .mainContainer__right {
+        flex: 1;
+    }
+
+    .mainContainer__right  img {
+        width: 100%;
+        height: auto;
+    }
+}
