@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { use } from "react";
 
 const CommentSchema = new mongoose.Schema({
     userId: {
