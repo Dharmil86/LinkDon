@@ -1,25 +1,82 @@
+
+
 .container {
-    padding: 1.2rem;
-    font-family: "Poppins";
+    padding: 0.8rem 2rem;
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02); 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 .navBar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%; 
+}
+
+.navBar h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #111827; 
+    letter-spacing: -0.03rem;
 }
 
 .navBarOptionContainer {
     display: flex;
+    align-items: center;
 }
 
+
+.navBarOptionContainer > div > div {
+    display: flex;
+    gap: 1.5rem !important; 
+    align-items: center;
+}
+
+.navBarOptionContainer p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #4b5563; 
+    transition: color 0.2s ease-in-out;
+}
+
+.navBarOptionContainer p:hover {
+    color: #111827; 
+}
+
+/* The Call to Action Button */
 .buttonJoin {
-    background: pink;
-    border-radius: 10px;
-    padding-block: 0.6rem;
-    padding-inline: 1.2rem;
-    color: white;
-    font-size: 0.7rem;
-    font-weight: bold;
+    background-color: #2563eb; 
+    border-radius: 8px; 
+    padding: 0.6rem 1.4rem;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonJoin p {
+    margin: 0;
+    color: #ffffff;
+}
+
+.buttonJoin:hover {
+    background-color: #1d4ed8; 
+    transform: translateY(-1px); 
+}
+
+.buttonJoin:active {
+    transform: translateY(0);
 }

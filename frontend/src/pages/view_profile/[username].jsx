@@ -73,44 +73,6 @@ const isCurrentUserInConnection = authState.connections?.some(
 }, [dispatch]);
 
 
-
-  
-  // useEffect(() => {
-  //  console.log(authState, userProfile.userId._id)
-  //   if(authState.connections.some(user => user.connectionId._id === userProfile.userId._id)) {
-  //     setIsCurrentUserInConnection(true)
-  //     if(authState.connections.find(user => user.connectionId._id === userProfile.userId._id).status_accepted === true) {
-  //       setIsConnectionNull(false);
-  //     }
-  //   }
-  //   if(authState.connectionRequest.some(user => user.connectionId._id === userProfile.userId._id)) {
-  //     setIsCurrentUserInConnection(true)
-  //     if(authState.connectionRequest.find(user => user.connectionId._id === userProfile.userId._id).status_accepted === true) {
-  //       setIsConnectionNull(false);
-  //     }
-  //   }
-
-  // }, [authState.connections])
-
-// useEffect(() => {
-//   if (
-//     Array.isArray(authState?.connections) &&
-//     userProfile?.userId?._id
-//   ) {
-//     const isConnected = authState.connections.some(
-//       user => user?.connectionId?._id === userProfile.userId._id
-//     );
-
-//     setIsCurrentUserInConnection(isConnected);
-//   }
-// }, [authState.connections, userProfile?.userId?._id]);
-
-
-
-
-
-
-
   useEffect(() => {
     getUserPost();
   }, [])

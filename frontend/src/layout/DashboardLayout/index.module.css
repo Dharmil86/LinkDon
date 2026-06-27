@@ -1,4 +1,4 @@
-.homeContainer {
+/* .homeContainer {
     display: flex;
 }
 
@@ -88,4 +88,104 @@ display: block;
         padding-bottom: 8vh;
     }
 }
+ */
 
+/* Keep exact layout structure */
+.homeContainer {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.homeContainer > div:nth-child(odd) {
+    flex: 0.2;
+}
+
+.homeContainer > div:nth-child(even) {
+    flex: 0.6;
+}
+
+/* Sidebar Styling */
+.homeContainer__leftBar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+    border-right: 1px solid #e5e7eb;
+    padding-top: 1.5rem;
+}
+
+.sideBarOption {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    gap: 1.25rem;
+    width: 85%;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    color: #4b5563;
+    transition: all 0.2s ease-in-out;
+}
+
+.sideBarOption:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.sideBarOption > svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: #6b7280;
+}
+
+/* Content Area */
+.homeContainer__extraContainer {
+    border-left: 1px solid #e5e7eb;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.homeContainer__feedContainer {
+    padding-inline: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+/* Mobile Navbar */
+.mobileNavbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    z-index: 1000;
+}
+
+.mobileNavbar svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    color: #4b5563;
+}
+
+/* RESPONSIVENESS */
+@media only screen and (max-width: 900px) {
+    .homeContainer > div:nth-child(odd):last-child {
+        display: none; /* Hide right sidebar on tablets */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .homeContainer__extraContainer { display: none; }
+    .homeContainer { display: block; }
+    .homeContainer__leftBar { display: none; }
+    .mobileNavbar { display: flex; }
+    .homeContainer__feedContainer { padding-bottom: 80px; }
+}

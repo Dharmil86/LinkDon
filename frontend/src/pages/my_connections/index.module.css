@@ -1,33 +1,65 @@
+
+
 .useCard {
     display: flex;
     width: 100%;
-    gap: 1.2rem;
-    padding: 1.3rem;
     align-items: center;
-    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    padding: 1rem;
+    background: #ffffff;
+    border: 1px solid #e5e7eb; 
+    border-radius: 16px;
     cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.useCard:hover {
+    border-color: #d1d5db;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .profilePicture > img {
-    width: 6.5rem;
+    width: 60px; 
+    height: 60px;
+    object-fit: cover;
     border-radius: 50%;
+    border: 2px solid #f3f4f6;
 }
 
-.myConnection {
+.userInfo {
     display: flex;
-    width: 100%;
-    justify-content: space-around;
-    padding-bottom: 1.5rem;
-    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    margin-left: 1.2rem;
+}
+
+.userInfo h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.userInfo p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6b7280;
 }
 
 .connectedButton {
-     padding-inline: 0.8rem;
-    padding-block: 0.3rem;
-    outline: none;
-    border: 1px solid ;
-    color: rgba(3, 93, 183, 0.918);;
-    border-radius: 10px;
+    padding: 0.5rem 1.25rem;
+    background: transparent;
+    border: 1.5px solid #2563eb;
+    color: #2563eb;
+    font-weight: 600;
+    border-radius: 8px;
     cursor: pointer;
-
+    transition: all 0.2s ease;
 }
+
+.connectedButton:hover {
+    background: #2563eb;
+    color: #ffffff;
+}
+

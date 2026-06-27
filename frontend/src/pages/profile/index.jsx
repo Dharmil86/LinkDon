@@ -168,7 +168,7 @@ export default function ProfilePage() {
                       <p style={{fontWeight: "bold", display: "flex", alignItems: "centre", gap: "0.8rem"}}>
                         {work.company} - {work.position}
                       </p>
-                      <p>{work.years}</p>
+                      <p>{work.years} Years</p>
                     </div>
                   )
                 })

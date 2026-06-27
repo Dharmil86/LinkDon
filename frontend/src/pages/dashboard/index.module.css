@@ -1,126 +1,176 @@
-.scrollComponent {
+
+
+ .scrollComponent {
     display: flex;
     justify-content: center;
-}
-
-
-.createPostContainer {
-    display: flex;
-    height: 10svh;
-    width: 100%;
-    padding-inline: 0.8rem;
-    gap: 1.3rem;
-    position: relative;
-    align-items: center;
-    background: rgb(255, 246, 246);
-    border-radius: 20px;
+    padding-top: 2rem; 
+    background-color: #fafafa; 
+    min-height: 100vh;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
-    gap: 1.3rem;
-    max-width: 80%;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 800px; 
 }
 
-.uploadButton {
-    position: absolute;
-    right: 0;
-    bottom: -30%;
-    background: rgb(0, 59, 130);
-    color: white;
-    border-radius: 10px;
-    padding-inline: 1.2rem;
-    padding-block: 0.8rem;
-    cursor: pointer;
+.createPostContainer {
+    display: flex;
+    width: 100%;
+    padding: 1.2rem; 
+    gap: 1rem;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
 }
 
 .userProfile {
-    border-radius: 100%;
-    height: 60%;
-    width: fit-content;
-}
-
-.Fab {
-    background: rgb(0, 59, 130);
-    border-radius: 100%;
-    justify-content: center;
-    display: flex;
-}
-
-.Fab > svg {
-    width: fit-content;
-    height: 40px;
-    color: white;
-
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    flex-shrink: 0; 
 }
 
 .textAreaOfContent {
-    width: 80%;
-    height: 70%;
-    border: 1px solid silver;
-    border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-inline: 1.5rem;
-    padding-block: 0.8rem;
+    flex: 1; 
+    min-height: 45px;
+    border: 1px solid #eaeaea;
+    border-radius: 24px; 
+    font-family: "Poppins", sans-serif;
+    padding: 0.75rem 1.25rem;
     outline: none;
+    background-color: #f9fafb;
+    transition: all 0.2s ease;
+    resize: none; 
+    font-size: 0.9rem;
 }
 
+.textAreaOfContent:focus {
+    background-color: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.Fab {
+    background: #2563eb;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    border: none;
+    flex-shrink: 0; 
+}
+
+.Fab:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
+}
+
+.Fab > svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
 
 .singleCard {
     width: 100%;
-    border-radius: 10px 10px 0px 0px;
-    border-bottom:1px solid  rgb(179, 179, 179);
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    overflow: hidden; 
+    margin-bottom: 0.8rem;
 }
 
 .singleCard_profileContainer {
     display: flex;
-    align-items: flex-start;
-    gap: 1.2rem;
+    align-items: flex-start; 
+    gap: 1rem; 
     padding: 1.2rem;
-    padding-right: 3.4rem;
+    position: relative;
 }
 
 .singleCard_profileContainer > img {
-    width: 10%;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.singleCard_profileContainer > div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.singleCard_profileContainer > svg {
+    color: #ef4444; 
+    cursor: pointer;
+    transition: opacity 0.2s;
+    opacity: 0.6;
+    margin-left: auto; 
+}
+
+.singleCard_profileContainer > svg:hover {
+    opacity: 1;
 }
 
 .singleCard_image {
     width: 100%;
-    padding-top: 0.6rem;
-    height: fit-content;
-    overflow: hidden;
-
+    max-height: 500px;
+    background-color: #f9fafb; 
+    display: flex;
+    justify-content: center;
 }
 
 .singleCard_image > img {
     width: 100%;
     height: auto;
+    max-height: 500px;
     object-fit: cover;
-    border-radius: 20px;
 }
 
 .optionsContainer {
     display: flex;
-    height: 20%;
-    width: 100%;
-    justify-content: space-between;
-    padding-block: 0.6rem;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0.8rem 2rem;
+    border-top: 1px solid #eaeaea;
 }
 
 .singleOption {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    justify-content: center;
+    gap: 0.4rem;
+    color: #6b7280;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: all 0.2s;
 }
 
-.singleOption >svg {
-    height: 100%;
-    width: 8%;
-    min-width: 1rem;
-    cursor: pointer;
+.singleOption:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.singleOption > svg {
+    height: 20px;
+    width: 20px;
 }
 
 .commentsContainer {
@@ -129,66 +179,81 @@
     height: 100vh;
     top: 0;
     left: 0;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.603);
-    overflow: hidden;
-    justify-content: center;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px); 
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .allComments {
-    /* width: 40vw; */
-    min-width: 40svw;
+    width: 100%;
+    max-width: 600px;
     height: 80vh;
-    max-width: 1120px;
     background: white;
-    border-radius: 10px;
+    border-radius: 16px;
     position: relative;
-    padding: 4rem;
-
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 .postCommentContainer {
     position: absolute;
-    bottom: 1.2rem;
-    left: 1.2rem;
-    width: 90%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
-
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-top: 1px solid #eaeaea;
+    border-radius: 0 0 16px 16px;
+    box-sizing: border-box;
 }
 
 .postCommentContainer > input {
-    flex: 0.9;
-    padding-inline:1.5rem ;
-    padding-block: 1.2rem;
-    border: none;
+    flex: 1;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #eaeaea;
     outline: none;
-    background-color: rgb(228, 228, 228);
-    border-radius: 10px;
+    background-color: #f9fafb;
+    border-radius: 24px;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.2s;
 }
 
-.postCommentContainer>input:focus{
-    border: 1px solid silver;
+.postCommentContainer > input:focus {
+    background-color: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .commentBtn {
-    flex: 0.1;
-    width: fit-content;
-    padding: 1.2rem;
-    background: rgb(4, 134, 221);
-    border-radius: 10px;
-    text-align: center;
+    background: #2563eb;
+    border-radius: 20px;
+    padding: 0.8rem 1.5rem;
     color: white;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
 }
 
-@media only screen and (max-width: 600px) {
+.commentBtn:hover {
+    background: #1d4ed8;
+}
+
+@media only screen and (max-width: 768px) {
     .allComments {
-        width: 90%;
+        width: 95%;
+        height: 90vh;
+    }
+    .wrapper {
+        max-width: 95%;
     }
 }
-

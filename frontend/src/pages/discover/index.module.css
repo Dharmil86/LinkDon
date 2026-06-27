@@ -1,23 +1,50 @@
+
+
 .allUserProfile {
-    max-width: 80%;
-    align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    width: 100%;
+    max-width: 900px;
 }
-
-
 
 .userCard {
     display: flex;
-    gap: 1.2rem;
-    cursor: pointer;
-    padding: 1.3rem;
     align-items: center;
-    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.1);
+    gap: 1.5rem;
+    padding: 1.25rem;
+    background: #ffffff;
+    border: 1px solid #e5e7eb; 
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.userCard:hover {
+    border-color: #d1d5db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .userCard_image {
-    width: 10%;
+    width: 60px; 
+    height: 60px;
+    object-fit: cover;
     border-radius: 50%;
+    border: 2px solid #f3f4f6;
+}
+
+.userCard h1 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.userCard p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
 }
