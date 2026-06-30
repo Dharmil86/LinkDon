@@ -1,109 +1,4 @@
-/* .container {
-    padding: 1.3rem;
-    background: rgb(247, 244, 244);
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.backDropContainer {
-    width: 100%;
-    height: 30vh;
-    background: url("https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    border-radius: 20px;
-}
-
-.backDropContainer > img {
-    width: 10em;
-    height: 10em;
-    object-fit: cover;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -30%;
-    left: 8%;
-    text-align: center;
-
-}
-
-.profileContainer_details {
-    padding-top: 6.6rem;
-}
-
-.card {
-    display: flex;
-    align-items: center;
-    gap: 1.4rem;
-}
-
-.card_profileContainer {
-    display: flex;
-}
-
-
-
-.card_profileContainer > img {
-    width: 3.4rem;
-    height: auto;
-    height: 3.4rem;
-    object-fit: cover;
-}
-
-
-
-.connectBtn {
-    padding-inline: 0.8rem;
-    padding-block: 0.3rem;
-    background: rgba(3, 93, 183, 0.918);
-    outline: none;
-    border: none;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.connectedButton {
-     padding-inline: 0.8rem;
-    padding-block: 0.3rem;
-    outline: none;
-    border: 1px solid ;
-    color: rgba(3, 93, 183, 0.918);;
-    border-radius: 10px;
-    cursor: pointer;
-
-}
-
-.workHistoryContainer {
-    display: flex;
-    gap: 1.4rem;
-    padding-top: 1.4rem;
-    width: 100%;
-    flex-wrap: wrap;
-
-}
-
-.workHistoryCard {
-    min-width: fit-content;
-    padding-inline: 2.5rem;
-    padding-block: 1rem;
-    border-radius: 10px;
-    box-shadow: 10px 10px 15px rgb(173, 173, 173);
-}
-
-.profileContainer_flex {
-    display: flex;
-    gap: 0.7rem;
-}
-
-@media only screen and (max-width: 600px) {
-    .profileContainer_flex {
-        flex-direction: column;
-    }
-} */
-
-/* Container - Cleaner background and spacing */
+/* 
 .container {
     padding: 1.5rem;
     background: #f9fafb;
@@ -113,7 +8,6 @@
     border-radius: 16px;
 }
 
-/* Banner area */
 .backDropContainer {
     width: 100%;
     height: 250px;
@@ -124,7 +18,6 @@
     border-radius: 16px;
 }
 
-/* Profile Picture - Added white ring for pop */
 .backDrop {
     width: 150px;
     height: 150px;
@@ -149,7 +42,6 @@
     gap: 2rem;
 }
 
-/* Buttons - Modern, pill-shaped design */
 .connectBtn, .connectedButton {
     padding: 0.6rem 1.5rem;
     font-weight: 600;
@@ -162,6 +54,9 @@
 .connectBtn {
     background: #2563eb;
     color: white;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+
 }
 
 .connectBtn:hover {
@@ -171,9 +66,10 @@
 .connectedButton {
     background: white;
     color: #2563eb;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 }
 
-/* Work History Cards - Clean look */
 .workHistoryContainer {
     display: flex;
     flex-direction: column;
@@ -190,7 +86,6 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
-/* Activity Previews */
 .card_profileContainer > img {
     width: 3.4rem;
     height: 3.4rem;
@@ -201,5 +96,273 @@
 @media only screen and (max-width: 768px) {
     .profileContainer_flex {
         flex-direction: column;
+    }
+} */
+
+
+.container {
+    padding: 24px;
+    background: #f3f4f6;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* =========================
+   COVER SECTION
+========================= */
+
+.backDropContainer {
+    width: 100%;
+    height: 260px;
+    background: url("https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 20px;
+    overflow: visible;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.backDrop {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -70px;
+    left: 40px;
+    border: 6px solid white;
+    background: white;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profileContainer_details {
+    background: white;
+    border-radius: 20px;
+    padding: 90px 32px 32px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.profileContainer_flex {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+/* =========================
+   USER INFO
+========================= */
+
+.profileContainer_flex h2 {
+    font-size: 2rem;
+    margin-bottom: 4px;
+    color: #111827;
+}
+
+.profileContainer_flex p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.connectBtn,
+.connectedButton {
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+.connectBtn {
+    background: #2563eb;
+    color: white;
+    border: none;
+}
+
+.connectBtn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.connectedButton {
+    background: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
+}
+
+.connectedButton:hover {
+    background: #dbeafe;
+}
+
+/* =========================
+   BIO CARD
+========================= */
+
+.profileContainer_flex h3 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.profileContainer_flex h3 + p {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    padding: 18px;
+    border-radius: 12px;
+    min-height: 100px;
+}
+
+/* =========================
+   RECENT ACTIVITY
+========================= */
+
+.postCard {
+    margin-bottom: 12px;
+}
+
+.card {
+    border-radius: 14px;
+    overflow: hidden;
+    background: white;
+    border: 1px solid #e5e7eb;
+    transition: all .25s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.08);
+}
+
+.card_profileContainer img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+
+.activitySection {
+    background: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 18px;
+    min-height: 250px;
+}
+
+.activitySection h3 {
+    margin-bottom: 16px;
+}
+
+/* =========================
+   WORK HISTORY
+========================= */
+
+.workHistory {
+    background: white;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.workHistory h4 {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+    color: #111827;
+}
+
+.workHistoryContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.workHistoryCard {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 20px;
+    transition: all .25s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.workHistoryCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+.workHistoryCard p:first-child {
+    font-weight: 700;
+    color: #111827;
+}
+
+.workHistoryCard p:last-child {
+    color: #6b7280;
+}
+
+/* =========================
+   RESUME ICON
+========================= */
+
+.resumeBtn {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2563eb;
+    transition: all .25s ease;
+}
+
+.resumeBtn:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.emptyActivity {
+    height: 180px;
+    border: 2px dashed #d1d5db;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6b7280;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .backDrop {
+        width: 120px;
+        height: 120px;
+        left: 20px;
+    }
+
+    .profileContainer_details {
+        padding: 70px 20px 20px;
+    }
+
+    .profileContainer_flex {
+        grid-template-columns: 1fr;
+    }
+
+    .workHistoryCard {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
 }

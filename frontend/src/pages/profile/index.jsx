@@ -116,9 +116,15 @@ export default function ProfilePage() {
           </div>
 
         <div className={styles.profileContainer_details}>
-            <div style={{display: "flex", gap: "0.7rem"}}>
+            <div style={{
+    display: "grid",
+    gridTemplateColumns: "2fr 1fr",
+    gap: "2rem",
+    alignItems: "start"
+  }}>
                 <div style={{flex: "0.8"}}>
-                    <div style={{display: "flex", width: "fit-content", alignItems: "center", gap: "1.2rem"}}>
+                    <h3>Name</h3>
+                    <div style={{display: "flex", width: "fit-content", alignItems: "center", gap: "1.2rem", marginBottom: "1rem"}}>
                         <input className={styles.nameEdit} type="text" value={userProfile.userId.name} onChange={(e) => {
                           setUserProfile({...userProfile, userId: {...userProfile.userId, name: e.target.value}})
                         }} />
@@ -128,6 +134,7 @@ export default function ProfilePage() {
 
 
                     <div>
+                        <h3>BIO</h3>
                         <textarea value={userProfile.bio} onChange={(e) => {
                           setUserProfile({...userProfile, bio: e.target.value})
                         }} 
@@ -140,7 +147,7 @@ export default function ProfilePage() {
                     
             
 
-                <div style={{flex: '0.2'}}>
+                <div className={styles.activitySection}>
 
                     <h3>Recent Activity</h3>
                     {userPosts.map((post) => {
@@ -158,7 +165,7 @@ export default function ProfilePage() {
             </div>    
         </div>
 
-          <div className="workHistory">
+          <div className={styles.workHistory}>
             <h4>Work History</h4>
             <div className={styles.workHistoryContainer}>
               {

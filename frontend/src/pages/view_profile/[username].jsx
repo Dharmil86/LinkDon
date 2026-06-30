@@ -151,13 +151,14 @@ const isCurrentUserInConnection = authState.connections?.some(
 
 
                 <div>
+                  <h3>BIO</h3>
                   <p>{userProfile.bio}</p>
                 </div>
 
 
 
               </div>
-              <div style={{flex: '0.2'}}>
+              <div className={styles.activitySection}>
 
                 <h3>Recent Activity</h3>
                 {userPosts.map((post) => {
@@ -181,7 +182,7 @@ const isCurrentUserInConnection = authState.connections?.some(
             </div>
           </div>
 
-          <div className="workHistory">
+          <div className={styles.workHistory}>
             <h4>Work History</h4>
             <div className={styles.workHistoryContainer}>
               {

@@ -233,6 +233,32 @@
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
+.uploadButton {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    border: none;
+    height: 45px;
+    min-width: 80px;
+}
+
+.uploadButton:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+.uploadButton:active {
+    transform: scale(0.98);
+}
+
 .commentBtn {
     background: #2563eb;
     border-radius: 20px;
@@ -247,6 +273,7 @@
 .commentBtn:hover {
     background: #1d4ed8;
 }
+
 
 @media only screen and (max-width: 768px) {
     .allComments {
