@@ -19,7 +19,7 @@ app.use(postsRoutes);
 
 
 const start = async () => {
-    const connectDB = await mongoose.connect("mongodb://Dharmil:ypl92cvpp@ac-p98hl0s-shard-00-00.nfgshyy.mongodb.net:27017,ac-p98hl0s-shard-00-01.nfgshyy.mongodb.net:27017,ac-p98hl0s-shard-00-02.nfgshyy.mongodb.net:27017/?ssl=true&replicaSet=atlas-8gnhiw-shard-0&authSource=admin&appName=proconnect");
+    const connectDB = await mongoose.connect(process.env.MONGO_URL);
     app.listen(8080, () => {
         console.log('Server is running on port 8080');
     });
